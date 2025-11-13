@@ -32,18 +32,18 @@ col1, col2 = st.columns(2)
 
 with col1:
     st.subheader("Price Data")
-    open_price = st.number_input("Open Price", min_value=0.0, value=100.0, step=1.0)
-    high_price = st.number_input("High Price", min_value=0.0, value=105.0, step=1.0)
-    low_price = st.number_input("Low Price", min_value=0.0, value=95.0, step=1.0)
+    open_price = st.number_input("Open Price", step=1.0)
+    high_price = st.number_input("High Price", step=1.0)
+    low_price = st.number_input("Low Price",step=1.0)
     volume = st.number_input("Volume", min_value=0, value=1000000, step=1000)
 
 with col2:
     st.subheader("Technical Indicators")
-    ma50 = st.number_input("50-Day Moving Average (MA50)", min_value=0.0, value=98.0, step=1.0)
-    ma200 = st.number_input("200-Day Moving Average (MA200)", min_value=0.0, value=102.0, step=1.0)
+    ma50 = st.number_input("50-Day Moving Average (MA50)", step=1.0)
+    ma200 = st.number_input("200-Day Moving Average (MA200)", step=1.0)
     
     st.subheader("Date Information")
-    year = st.number_input("Year", min_value=2000, max_value=2030, value=2024, step=1)
+    year = st.number_input("Year", min_value=1995, max_value=2030, value=2024, step=1)
     month = st.number_input("Month", min_value=1, max_value=12, value=6, step=1)
     day = st.number_input("Day", min_value=1, max_value=31, value=15, step=1)
 
